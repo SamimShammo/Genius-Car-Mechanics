@@ -6,7 +6,7 @@ import third from '../../../images/banner/banner2.jpg'
 
 const Banner = () => {
     return (
-        <>
+        <div className="mb-5">
             <Carousel>
   <Carousel.Item>
     <img
@@ -44,7 +44,7 @@ const Banner = () => {
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
-        </>
+        </div>
     );
 };
 
