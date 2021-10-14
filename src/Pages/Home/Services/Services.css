@@ -1,0 +1,33 @@
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.services-container img {
+    width: 100%;
+    border-radius: 20px 20px 0 0 ;
+}
+
+
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (min-width: 0px) and (max-width: 575.98px) {
+    .services-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+ }
+@media (min-width: 576.98px) and (max-width: 768.98px) {
+    .services-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+ }
+@media (min-width: 769.98px) and (max-width: 991.98px) {
+    .services-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+ }
+
+
+
+
+/* // XX-Large devices (larger desktops) */
+/* // No media query since the xxl breakpoint has no upper bound on its width */
