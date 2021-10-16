@@ -7,7 +7,7 @@ const Login = () => {
         <div>
            <h2> This is Login</h2>
            <button onClick={signInWithGoogle}>Google  Sign In</button>
-           <p>{error}</p>
+           <p className="text-danger">{error}</p>
         </div>
     );
 };

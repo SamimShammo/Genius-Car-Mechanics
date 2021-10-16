@@ -31,7 +31,7 @@ const Header = () => {
          <Nav.Link className=" nav-logo" as={HashLink} to="/login#login">login</Nav.Link>
        }
      
-        <p>{error}</p>
+     
       
      
       <Navbar.Text>

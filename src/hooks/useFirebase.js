@@ -26,6 +26,22 @@ const useFirebase = () => {
    
          .finally(() => setIsLoading(false));
      }
+     useEffect(() => {
+        const unsubscribed = onAuthStateChanged(auth, user => {
+            if (user) {
+                setUser(user);
+            }
+            else {
+                setUser({})
+            }
+            setIsLoading(false);
+            
+        });
+        
+        return () => unsubscribed;
+    }, [])
+
+
      const logout = () => {
 
         setIsLoading(true)
@@ -41,26 +57,9 @@ const useFirebase = () => {
           .finally(() => setIsLoading(false));
      }
 
-     useEffect(() => {
-        const unsubscriber = () => {
-            onAuthStateChanged(auth, user => {
-                if(user) {
-                  setUser(user)
-                  setError('')
-                }
-                else{
-                    setUser({})
-                }
-                
-                setIsLoading(false)
-                .catch(error => {
-                    setError(error.message)
-                })
-            });
-        }
-        return () => unsubscriber;
-
-     }, [])
+    
+     
+     
 
     return {
         isLoading,
